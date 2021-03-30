@@ -17,12 +17,12 @@ public class Dog extends Pet implements Talkable {
 
     @Override
     public String talk() {
-        return "Bark";
+        return "Bark ";
     }
 
     @Override
     public String toString() {
-        return "Dog: " + "name=" + name + " friendly=" + friendly;
+        return "Dog= " + "name: " + name + " friendly: " + friendly;
     }
 
 

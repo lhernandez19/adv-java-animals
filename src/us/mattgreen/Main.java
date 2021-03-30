@@ -10,10 +10,14 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Talkable> zoo = new ArrayList<>();
 
+        Module1Assignment ma = new Module1Assignment(zoo);
+        ma.decisions();
+        zoo = ma.getList();
+
         // Lines to Replace Begin Here
-        zoo.add(new Dog(true, "Bean"));
-        zoo.add(new Cat(9, "Charlie"));
-        zoo.add(new Teacher(44, "Stacy Read"));
+//        zoo.add(new Dog(true, "Bean"));
+//        zoo.add(new Cat(9, "Charlie"));
+//        zoo.add(new Teacher(44, "Stacy Read"));
         // End Lines to Replace
 
         for (Talkable thing : zoo) {
@@ -31,7 +35,9 @@ public class Main {
     }
 
     public static void printOut(Talkable p) {
-        System.out.println(p.getName() + " says=" + p.talk());
+        System.out.println(p.toString());
         outFile.fileWrite(p.getName() + " | " + p.talk());
     }
 }
+
+// p.getName() + " says=" + p.talk() +
